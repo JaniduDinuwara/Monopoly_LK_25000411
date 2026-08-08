@@ -18,7 +18,20 @@ int start() {
 return 0;
 }
 
+// void sorting_players() {
+//    struct Players *ptr[] = &players;
 
+// for (int i=0; i<4; i++){
+//    for (int j=0; j<4; j++){
+
+//         if(ptr[j]->first_roll < ptr[j+1]->first_roll) {
+
+//         }
+
+
+//    }
+//}
+//}
 
 
 

@@ -55,7 +55,8 @@ typedef struct {            //create a structure for defining each square on the
 } Squares;
 
 int rolldice(); //Funtion call from dice.c to main.c
-void dice(int sum[4]); //Funtion call from dice.c to main.c
+void dice(); //Funtion call from dice.c to main.c
+void tie_breaker(); //Funtion call from dice.c to main.c
 
 extern Squares squares[40];
 //Squares* getBoard()

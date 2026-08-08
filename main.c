@@ -36,9 +36,9 @@ void main() {
  srand(time(NULL));
 
 
-int sum[4];
-dice(sum);
+dice();
+tie_breaker(); // call the tie breaker function to check if any players are tied.
 
-int start_game = start();
+// int start_game = start();
      
 }
