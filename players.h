@@ -9,6 +9,7 @@ typedef struct {
     int balance;
     int current_position;
     int first_roll;
+    int player_order;
 } Players;
 
 
