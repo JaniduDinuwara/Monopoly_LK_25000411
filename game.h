@@ -3,5 +3,5 @@
 
 
 void sorting_players();
-
+void start_playing();
 #endif // GAME_H

@@ -39,27 +39,34 @@ return 0;
 void sorting_players() {
 
     // array of pointers to each player
-    Players *ptr[4];
-    for (int i = 0; i < 4; i++) {
-        ptr[i] = &players[i];
-    }
+   //  Players *ptr[4];
+   //  for (int i = 0; i < 4; i++) {
+   //      ptr[i] = &players[i];
+   // }
 
-    // bubble sort descending by first_roll
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3 - i; j++) {
-            if (ptr[j]->first_roll < ptr[j + 1]->first_roll) {
-                Players *temp = ptr[j];
-                ptr[j] = ptr[j + 1];
-                ptr[j + 1] = temp;
+            if (players[j].first_roll < players[j + 1].first_roll) {
+                Players temp = players[j];
+                players[j] = players[j + 1];
+                players[j + 1] = temp;
             }
         }
     }
 
-    // print final order
-    printf("\nFinal order:\n");
+    
+    printf("\nFinal order:\n");// print final order
     for (int i = 0; i < 4; i++) {
-        printf("%d. %s (%d)\n", i + 1, ptr[i]->player_name, ptr[i]->first_roll);
+        printf("%d. %s (%d)\n", i + 1, players[i].player_name, players[i].first_roll);
     }
 }
 
+void start_playing() {
+ for(int i =0; i<4; i++){
+   players[i].dice_roll = rolldice();
+   printf("\nRolls %s : %d\n",players[i].player_name,players[i].dice_roll);
+players[i].current_position = players[i].current_position + players[i].dice_roll;
+printf("Current Position : %d\n", players[i].current_position);
 
+}
+}
