@@ -38,6 +38,7 @@ void main() {
 
 dice();
 tie_breaker(); // call the tie breaker function to check if any players are tied.
+sorting_players(); //call the sorting players function 
 
 // int start_game = start();
      
