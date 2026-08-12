@@ -62,11 +62,21 @@ void sorting_players() {
 }
 
 void start_playing() {
- for(int i =0; i<4; i++){
-   players[i].dice_roll = rolldice();
-   printf("\nRolls %s : %d\n",players[i].player_name,players[i].dice_roll);
-players[i].current_position = players[i].current_position + players[i].dice_roll;
-printf("Current Position : %d\n", players[i].current_position);
+ for (int i=0; i<500; i++){
+    players[4].game_round = i;
+    //printf("\nGame Round : %d\n",players[4].game_round);
+     for(int j =0; j<4; j++){
+   players[j].dice_roll = rolldice();
+   printf("\nRolls %s : %d\n",players[j].player_name,players[j].dice_roll);
+players[j].current_position = (players[j].current_position + players[j].dice_roll)%40;
+
+if(players[j].current_position + players[j].dice_roll >=40){
+    players[j].balance += 2000;
+     printf("\n%s passed GO! Collected LKR 2,000.\n", players[j].player_name);
+}
+printf("Current Balance : %d\n",players[j].balance);
+printf("Current Position : %d\n", players[j].current_position);
 
 }
+ }
 }
