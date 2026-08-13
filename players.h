@@ -11,7 +11,7 @@ typedef struct {
     int first_roll;
     int dice_roll;
     int player_round;
-    int game_round;
+    //int game_round;
 } Players;
 
 

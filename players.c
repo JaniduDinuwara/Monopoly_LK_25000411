@@ -11,8 +11,8 @@ Players players[4] =
      .current_position = 0,
      .first_roll = 0,
      .dice_roll=0,
-     .player_round=0,
-     .game_round=0},
+     .player_round=0 },
+     //.game_round=0},
 
 //Conservative Banker
     {.player_id = 2, 
@@ -21,8 +21,8 @@ Players players[4] =
      .current_position = 0, 
      .first_roll = 0,
      .dice_roll=0,
-     .player_round=0,
-     .game_round=0},
+     .player_round=0},
+     //.game_round=0},
 
 //Risk Taker
     {.player_id = 3, 
@@ -31,8 +31,8 @@ Players players[4] =
      .current_position = 0, 
      .first_roll = 0,
      .dice_roll=0,
-     .player_round=0,
-     .game_round=0},
+     .player_round=0},
+     //.game_round=0},
   
 //Opportunistic Trader
     {.player_id = 4, 
@@ -41,6 +41,6 @@ Players players[4] =
      .current_position = 0, 
      .first_roll = 0,
      .dice_roll=0,
-     .player_round=0,
-     .game_round=0}
+     .player_round=0}
+     //.game_round=0}
 };
