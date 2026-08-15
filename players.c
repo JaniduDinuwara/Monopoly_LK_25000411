@@ -494,8 +494,9 @@ if(landed_square->square_type == Property){
     if(landed_square->property_details.current_owner_no == -1){
         int price = landed_square->property_details.purchase_price;
         int remaining_balance = players[j].balance - price;
-        int construction_cost = landed_square->property_details.house_construction_cost + landed_square->property_details.hotel_construction_cost;
-        if (remaining_balance > construction_cost){
+        int house_construction_cost = landed_square->property_details.house_construction_cost ;
+        int hotel_construction_cost = landed_square->property_details.hotel_construction_cost;
+        if (remaining_balance > house_construction_cost || remaining_balance > hotel_construction_cost){
             landed_square->property_details.current_owner_no = players[j].player_id;
             players[j].balance = remaining_balance;
             players[j].total_property++;
@@ -525,12 +526,13 @@ if(landed_square->square_type == Property){
         if(landed_square->property_details.current_owner_no == -1){
         int price = landed_square->property_details.purchase_price;
         int remaining_balance = players[j].balance - price;
-        int construction_cost = landed_square->property_details.house_construction_cost + landed_square->property_details.hotel_construction_cost;
-        if (remaining_balance > construction_cost){
+        int house_construction_cost = landed_square->property_details.house_construction_cost ;
+        int hotel_construction_cost = landed_square->property_details.hotel_construction_cost;
+        if (remaining_balance > house_construction_cost || remaining_balance > hotel_construction_cost){
             landed_square->property_details.current_owner_no = players[j].player_id;
             players[j].balance = remaining_balance;
             players[j].total_railways++;
-            players[j].net_worth += landed_square->property_details.purchase_price;
+            players[j].net_worth = remaining_balance + price;
             printf("\n%s purchased %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
             printf("Remaining Balance : LKR %d\n",players[j].balance);
         } // no action. he goes to next turn
@@ -584,14 +586,15 @@ if(landed_square->square_type == Property){
         if(landed_square->property_details.current_owner_no == -1){
         int price = landed_square->property_details.purchase_price;
         int remaining_balance = players[j].balance - price;
-        int construction_cost = landed_square->property_details.house_construction_cost + landed_square->property_details.hotel_construction_cost;
-        if (remaining_balance > construction_cost){
+        int house_construction_cost = landed_square->property_details.house_construction_cost ;
+        int hotel_construction_cost = landed_square->property_details.hotel_construction_cost;
+        if (remaining_balance > house_construction_cost || remaining_balance > hotel_construction_cost){
             landed_square->property_details.current_owner_no = players[j].player_id;
             players[j].balance = remaining_balance;
             printf("\n%s purchased %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
             printf("Remaining Balance : LKR %d\n",players[j].balance);
             players[j].total_utilities++;
-            players[j].net_worth += landed_square->property_details.purchase_price;
+            players[j].net_worth = remaining_balance + price;
         } // no action. he goes to next turn
 
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){

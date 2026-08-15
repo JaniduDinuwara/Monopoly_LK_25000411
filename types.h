@@ -15,27 +15,28 @@ typedef enum {        //create an enumeration for defining square types
 
 typedef enum {       // create an enumeration for defining property groups
     None,
-    Red,
+    Brown,
     LightBlue,
-    Green,
-    Yellow,
-    Orange,
-    DarkBlue,
     Pink,
-    Brown
+    Orange,
+    Red,
+    Yellow,
+    Green,
+    DarkBlue
 } PropertyGroup;
 
 
 typedef struct {                  //create a structure for defining properties of each square
     int purchase_price;
-    int mortgage_value;
     int rent_price;
-    int house_construction_cost;
-    int hotel_construction_cost;
     int current_owner_no;
     int mortgage_status;
     int insurance_status;
     int number_of_buildings;
+     int mortgage_value;
+     int house_construction_cost;
+    int hotel_construction_cost;
+    
     
 } Properties;
 
@@ -79,15 +80,22 @@ typedef struct {
     int game_round;
 } Players;
 
+typedef struct {
+    PropertyGroup property_group;
+    Properties property_details;
+    int last_boom_round;
+    int last_decline_round;
+    
 
+} PropertyColour;
 
 int rolldice(); //Funtion call from dice.c to main.c
 void dice(); //Funtion call from dice.c to main.c
 void tie_breaker(); //Funtion call from dice.c to main.c
-int dynamic_property_market(); //Funtion call from economy.c to main.c
+int dynamic_property_market(int game_round); //Funtion call from economy.c to main.c
 
 extern Squares squares[40];
 extern Players players[4];
-
+extern PropertyColour property_colour[8];
 //Squares* getBoard()
 #endif 

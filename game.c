@@ -95,10 +95,12 @@ int players_pass_go = 0;  //calculate the players who passed GO
 if(players_pass_go == 4){ //calculate the game round
     game_round++;
     players_pass_go = 0;
-    //printf("\nGame Round : %d\n",game_round);
+ dynamic_property_market(game_round);
+    printf("\nGame Round : %d\n",game_round);
   }
 
  }
+
 }
 }
 

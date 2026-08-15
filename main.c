@@ -13,7 +13,7 @@ void main() {
 
    // Squares box0 = board[1];
    // printf("Square ID: %d, Name: %s, Type: %d\n", box0.square_id, box0.square_name, box0.square_type);
-
+setbuf(stdout, NULL);
     printf("\n\n-----MONOPOLY-LK Simulation-----\n\n");
     printf("Player %d : %s\n", players[0].player_id, players[0].player_name);
     printf("Player %d : %s\n", players[1].player_id, players[1].player_name);
@@ -40,10 +40,7 @@ dice();
 tie_breaker(); // call the tie breaker function to check if any players are tied.
 sorting_players(); //call the sorting players function 
 start_playing();
-// Player_Aggressive_Investor();
-// Player_Conservative_Banker(int j);
-// Player_Risk_Taker(int j);
-// Player_Opportunistic_Trader(int j);
+//dynamic_property_market(0);
 
 // int start_game = start();
      

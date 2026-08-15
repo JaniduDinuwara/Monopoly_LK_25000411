@@ -23,6 +23,7 @@ Squares squares[40] =
             .house_construction_cost = 500,
             .hotel_construction_cost = 2000,
             .current_owner_no = -1,
+        
         }
     },
 
@@ -47,6 +48,7 @@ Squares squares[40] =
             .house_construction_cost = 500,
             .hotel_construction_cost = 2000,
             .current_owner_no = -1,
+            
         }
     },
 
@@ -85,6 +87,7 @@ Squares squares[40] =
             .house_construction_cost = 750,
             .hotel_construction_cost = 3000,
             .current_owner_no = -1,
+            
         }
     },
 
@@ -109,6 +112,7 @@ Squares squares[40] =
             .house_construction_cost = 750,
             .hotel_construction_cost = 3000,
             .current_owner_no = -1,
+        
         }
     },
 
@@ -125,6 +129,7 @@ Squares squares[40] =
             .house_construction_cost = 750,
             .hotel_construction_cost = 3000,
             .current_owner_no = -1,
+        
         }
     },
 
@@ -548,8 +553,91 @@ Squares squares[40] =
  * board[1]
  * ...
  * board[39]
- */
+ 
 Squares *getBoard(void)
 {
     return squares;
-}
+}*/
+
+PropertyColour property_colour[8] = 
+{ 
+     {.property_group = Brown, 
+        .last_boom_round = 0,
+         .last_decline_round = 0,
+        .property_details = {
+            .mortgage_value = 750,
+            .house_construction_cost = 500,
+            .hotel_construction_cost = 2000,
+        }
+        },
+
+    {.property_group = LightBlue,
+         .last_boom_round = 0, 
+         .last_decline_round = 0,
+        .property_details = {
+            .mortgage_value = 1250,
+            .house_construction_cost = 750, 
+            .hotel_construction_cost = 3000,
+        }
+        },
+
+    {.property_group = Pink,
+         .last_boom_round = 0, 
+         .last_decline_round = 0,
+        .property_details = {
+            .mortgage_value = 1750,
+            .house_construction_cost = 1000, 
+            .hotel_construction_cost = 4000,
+        }
+        },
+
+    {.property_group = Orange, 
+        .last_boom_round = 0, 
+        .last_decline_round = 0,
+    .property_details = {
+            .mortgage_value = 2250,
+            .house_construction_cost = 1250, 
+            .hotel_construction_cost = 5000,
+        }
+    },
+
+    {.property_group = Red, 
+        .last_boom_round = 0, 
+        .last_decline_round = 0,
+    .property_details = {
+            .mortgage_value = 2750,
+            .house_construction_cost = 1500, 
+            .hotel_construction_cost = 6000,
+        }
+    },
+
+    {.property_group = Yellow, 
+        .last_boom_round = 0, 
+        .last_decline_round = 0,
+    .property_details = {
+            .mortgage_value = 3250,
+            .house_construction_cost = 2000, 
+            .hotel_construction_cost = 8000,
+        }
+    },
+
+    {.property_group = Green, 
+        .last_boom_round = 0, 
+        .last_decline_round = 0,
+    .property_details = {
+            .mortgage_value = 4000,
+            .house_construction_cost = 2500, 
+            .hotel_construction_cost = 10000,
+        }
+    },
+
+    {.property_group = DarkBlue, 
+        .last_boom_round = 0,
+         .last_decline_round = 0,
+        .property_details = {
+            .mortgage_value = 5000,
+            .house_construction_cost = 3000, 
+            .hotel_construction_cost = 12000,
+        }
+    }
+};
