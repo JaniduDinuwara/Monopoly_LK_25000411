@@ -49,7 +49,8 @@ void start_playing() {
 int game_round = 0;   // called to calculate the game round
 int players_pass_go = 0;  //calculate the players who passed GO
 
- for (int i=0; i<500; i++){
+ for (int i=0; i<500; i++){ 
+   printf("\n>>> Turn %d \n",i+1); // output is unclear. so i was using this
    // players[4].game_round = i;
     //printf("\nGame Round : %d\n",players[4].game_round);
      for(int j =0; j<4; j++){
