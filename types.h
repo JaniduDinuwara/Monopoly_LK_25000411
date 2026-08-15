@@ -93,6 +93,8 @@ int rolldice(); //Funtion call from dice.c to main.c
 void dice(); //Funtion call from dice.c to main.c
 void tie_breaker(); //Funtion call from dice.c to main.c
 int dynamic_property_market(int game_round); //Funtion call from economy.c to main.c
+void apply_market_boom(PropertyGroup group);
+void apply_market_decline(PropertyGroup group);
 
 extern Squares squares[40];
 extern Players players[4];
