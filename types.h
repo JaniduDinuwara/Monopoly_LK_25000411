@@ -27,16 +27,24 @@ typedef enum {       // create an enumeration for defining property groups
 
 
 typedef struct {                  //create a structure for defining properties of each square
-    double purchase_price;
-    double mortgage_value;
-    double rent_price;
-    double house_construction_cost;
-    double hotel_construction_cost;
+    int purchase_price;
+    int mortgage_value;
+    int rent_price;
+    int house_construction_cost;
+    int hotel_construction_cost;
     int current_owner_no;
     int mortgage_status;
     int insurance_status;
     int number_of_buildings;
+    
 } Properties;
+
+typedef enum {  //create an enumeration for defining player types to identify each player and go to the corresponding function
+    Aggressive_Investor,
+    Conservative_Banker,
+    Risk_Taker,
+    Opportunistic_Trader
+} PlayerType;
 
 
 
@@ -54,10 +62,31 @@ typedef struct {            //create a structure for defining each square on the
 
 } Squares;
 
+typedef struct {
+    int player_id;
+    char player_name[40];
+    int balance;
+    int current_position;
+    int first_roll;
+    int dice_roll;
+    int player_round;
+    int total_property;
+    int total_railways;
+    int total_utilities;
+    int net_worth;
+
+    PlayerType player_type;
+    //int game_round;
+} Players;
+
+
+
 int rolldice(); //Funtion call from dice.c to main.c
 void dice(); //Funtion call from dice.c to main.c
 void tie_breaker(); //Funtion call from dice.c to main.c
 
 extern Squares squares[40];
+extern Players players[4];
+
 //Squares* getBoard()
 #endif 

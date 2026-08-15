@@ -18,23 +18,7 @@ int start() {
 return 0;
 }
 
-// void sorting_players() {
-//    struct Players *ptr[] = &players;
 
-// for (int i=0; i<4; i++){
-//    for (int j=0; j<4; j++){
-
-//         if(ptr[j]->first_roll < ptr[j+1]->first_roll) {
-//          do {
-//             printf("Players")
-//          }
-
-//         }
-
-
-//    }
-// }
-// }
 
 void sorting_players() {
 
@@ -62,8 +46,8 @@ void sorting_players() {
 }
 
 void start_playing() {
-int game_round = 0;
-int players_pass_go = 0;
+int game_round = 0;   // called to calculate the game round
+int players_pass_go = 0;  //calculate the players who passed GO
 
  for (int i=0; i<500; i++){
    // players[4].game_round = i;
@@ -82,7 +66,7 @@ int players_pass_go = 0;
 
    printf("%s moves from square %d to square %d\n", players[j].player_name, old_position, players[j].current_position);
    
-   if(new_position >= 40){
+   if(new_position >= 40){   //check player passed go
     players[j].balance += 2000;
     players_pass_go++;
     players[j].player_round++;
@@ -91,11 +75,28 @@ int players_pass_go = 0;
       printf("Current Balance : LKR %d\n",players[j].balance);
    }
 
-if(players_pass_go == 4){
+   switch (players[j].player_type) {  //call the player function for continue player behavior
+    case Aggressive_Investor:
+        Player_Aggressive_Investor(j);
+        break;
+    case Conservative_Banker:
+        Player_Conservative_Banker(j);
+        break;
+    case Risk_Taker:
+        Player_Risk_Taker(j);
+        break;
+    case Opportunistic_Trader:
+        Player_Opportunistic_Trader(j);
+        break;
+}
+
+
+if(players_pass_go == 4){ //calculate the game round
     game_round++;
     players_pass_go = 0;
     //printf("\nGame Round : %d\n",game_round);
   }
+
  }
 }
 }

@@ -2,7 +2,7 @@
 
 Squares squares[40] =
 {
-    /* 0 */
+    /* 0 */ 
     {
         .square_id = 0,
         .square_type = Start,
@@ -17,11 +17,12 @@ Squares squares[40] =
         .square_name = "Pettah",
         .property_group = Brown,
         .property_details = {
-            .purchase_price = 1500.00,
-            .mortgage_value = 750.00,
-            .rent_price = 100.00,
-            .house_construction_cost = 500.00,
-            .hotel_construction_cost = 2000.00
+            .purchase_price = 1500,
+            .mortgage_value = 750,
+            .rent_price = 100,
+            .house_construction_cost = 500,
+            .hotel_construction_cost = 2000,
+            .current_owner_no = -1,
         }
     },
 
@@ -40,11 +41,12 @@ Squares squares[40] =
         .square_name = "Maradana",
         .property_group = Brown,
         .property_details = {
-            .purchase_price = 1800.00,
-            .mortgage_value = 750.00,
-            .rent_price = 120.00,
-            .house_construction_cost = 500.00,
-            .hotel_construction_cost = 2000.00
+            .purchase_price = 1800,
+            .mortgage_value = 750,
+            .rent_price = 120,
+            .house_construction_cost = 500,
+            .hotel_construction_cost = 2000,
+            .current_owner_no = -1,
         }
     },
 
@@ -63,9 +65,10 @@ Squares squares[40] =
         .square_name = "Colombo Fort Railway Station",
         .property_group = None,
         .property_details = {
-            .purchase_price = 1500.00,
-            .mortgage_value = 750.00,
-            .rent_price = 250.00
+            .purchase_price = 1500,
+            .mortgage_value = 750,
+            .rent_price = 250,
+            .current_owner_no = -1,
         }
     },
 
@@ -76,11 +79,12 @@ Squares squares[40] =
         .square_name = "Bambalapitiya",
         .property_group = LightBlue,
         .property_details = {
-            .purchase_price = 2500.00,
-            .mortgage_value = 1250.00,
-            .rent_price = 180.00,
-            .house_construction_cost = 750.00,
-            .hotel_construction_cost = 3000.00
+            .purchase_price = 2500,
+            .mortgage_value = 1250,
+            .rent_price = 180,
+            .house_construction_cost = 750,
+            .hotel_construction_cost = 3000,
+            .current_owner_no = -1,
         }
     },
 
@@ -99,11 +103,12 @@ Squares squares[40] =
         .square_name = "Wellawatte",
         .property_group = LightBlue,
         .property_details = {
-            .purchase_price = 2700.00,
-            .mortgage_value = 1250.00,
-            .rent_price = 200.00,
-            .house_construction_cost = 750.00,
-            .hotel_construction_cost = 3000.00
+            .purchase_price = 2700,
+            .mortgage_value = 1250,
+            .rent_price = 200,
+            .house_construction_cost = 750,
+            .hotel_construction_cost = 3000,
+            .current_owner_no = -1,
         }
     },
 
@@ -114,11 +119,12 @@ Squares squares[40] =
         .square_name = "Mount Lavinia",
         .property_group = LightBlue,
         .property_details = {
-            .purchase_price = 3000.00,
-            .mortgage_value = 1250.00,
-            .rent_price = 220.00,
-            .house_construction_cost = 750.00,
-            .hotel_construction_cost = 3000.00
+            .purchase_price = 3000,
+            .mortgage_value = 1250,
+            .rent_price = 220,
+            .house_construction_cost = 750,
+            .hotel_construction_cost = 3000,
+            .current_owner_no = -1,
         }
     },
 
@@ -137,11 +143,12 @@ Squares squares[40] =
         .square_name = "Nugegoda",
         .property_group = Pink,
         .property_details = {
-            .purchase_price = 3500.00,
-            .mortgage_value = 1750.00,
-            .rent_price = 260.00,
-            .house_construction_cost = 1000.00,
-            .hotel_construction_cost = 4000.00
+            .purchase_price = 3500,
+            .mortgage_value = 1750,
+            .rent_price = 260,
+            .house_construction_cost = 1000,
+            .hotel_construction_cost = 4000,
+            .current_owner_no = -1,
         }
     },
 
@@ -152,8 +159,9 @@ Squares squares[40] =
         .square_name = "Ceylon Electricity Board",
         .property_group = None,
         .property_details = {
-            .purchase_price = 1500.00,
-            .mortgage_value = 750.00
+            .purchase_price = 1500,
+            .mortgage_value = 750,
+            .current_owner_no = -1,
         }
     },
 
@@ -164,11 +172,12 @@ Squares squares[40] =
         .square_name = "Maharagama",
         .property_group = Pink,
         .property_details = {
-            .purchase_price = 3800.00,
-            .mortgage_value = 1750.00,
-            .rent_price = 280.00,
-            .house_construction_cost = 1000.00,
-            .hotel_construction_cost = 4000.00
+            .purchase_price = 3800,
+            .mortgage_value = 1750,
+            .rent_price = 280,
+            .house_construction_cost = 1000,
+            .hotel_construction_cost = 4000,
+            .current_owner_no = -1,
         }
     },
 
@@ -179,11 +188,12 @@ Squares squares[40] =
         .square_name = "Kottawa",
         .property_group = Pink,
         .property_details = {
-            .purchase_price = 4000.00,
-            .mortgage_value = 1750.00,
-            .rent_price = 300.00,
-            .house_construction_cost = 1000.00,
-            .hotel_construction_cost = 4000.00
+            .purchase_price = 4000,
+            .mortgage_value = 1750,
+            .rent_price = 300,
+            .house_construction_cost = 1000,
+            .hotel_construction_cost = 4000,
+            .current_owner_no = -1,
         }
     },
 
@@ -194,9 +204,10 @@ Squares squares[40] =
         .square_name = "Kandy Railway Station",
         .property_group = None,
         .property_details = {
-            .purchase_price = 1500.00,
-            .mortgage_value = 750.00,
-            .rent_price = 250.00
+            .purchase_price = 1500,
+            .mortgage_value = 750,
+            .rent_price = 250,
+            .current_owner_no = -1,
         }
     },
 
@@ -207,11 +218,12 @@ Squares squares[40] =
         .square_name = "Negombo",
         .property_group = Orange,
         .property_details = {
-            .purchase_price = 4500.00,
-            .mortgage_value = 2250.00,
-            .rent_price = 350.00,
-            .house_construction_cost = 1250.00,
-            .hotel_construction_cost = 5000.00
+            .purchase_price = 4500,
+            .mortgage_value = 2250,
+            .rent_price = 350,
+            .house_construction_cost = 1250,
+            .hotel_construction_cost = 5000,
+            .current_owner_no = -1,
         }
     },
 
@@ -222,8 +234,9 @@ Squares squares[40] =
         .square_name = "Sri Lanka Insurance",
         .property_group = None,
         .property_details = {
-            .purchase_price = 1500.00,
-            .mortgage_value = 750.00
+            .purchase_price = 1500,
+            .mortgage_value = 750,
+            .current_owner_no = -1,
         }
     },
 
@@ -234,11 +247,12 @@ Squares squares[40] =
         .square_name = "Katunayake",
         .property_group = Orange,
         .property_details = {
-            .purchase_price = 4700.00,
-            .mortgage_value = 2250.00,
-            .rent_price = 370.00,
-            .house_construction_cost = 1250.00,
-            .hotel_construction_cost = 5000.00
+            .purchase_price = 4700,
+            .mortgage_value = 2250,
+            .rent_price = 370,
+            .house_construction_cost = 1250,
+            .hotel_construction_cost = 5000,
+            .current_owner_no = -1,
         }
     },
 
@@ -249,11 +263,12 @@ Squares squares[40] =
         .square_name = "Ja-Ela",
         .property_group = Orange,
         .property_details = {
-            .purchase_price = 5000.00,
-            .mortgage_value = 2250.00,
-            .rent_price = 400.00,
-            .house_construction_cost = 1250.00,
-            .hotel_construction_cost = 5000.00
+            .purchase_price = 5000.,
+            .mortgage_value = 2250,
+            .rent_price = 400,
+            .house_construction_cost = 1250,
+            .hotel_construction_cost = 5000,
+            .current_owner_no = -1,
         }
     },
 
@@ -272,11 +287,12 @@ Squares squares[40] =
         .square_name = "Kandy City",
         .property_group = Red,
         .property_details = {
-            .purchase_price = 5500.00,
-            .mortgage_value = 2750.00,
-            .rent_price = 450.00,
-            .house_construction_cost = 1500.00,
-            .hotel_construction_cost = 6000.00
+            .purchase_price = 5500,
+            .mortgage_value = 2750,
+            .rent_price = 450,
+            .house_construction_cost = 1500,
+            .hotel_construction_cost = 6000,
+            .current_owner_no = -1,
         }
     },
 
@@ -295,11 +311,12 @@ Squares squares[40] =
         .square_name = "Peradeniya",
         .property_group = Red,
         .property_details = {
-            .purchase_price = 5800.00,
-            .mortgage_value = 2750.00,
-            .rent_price = 480.00,
-            .house_construction_cost = 1500.00,
-            .hotel_construction_cost = 6000.00
+            .purchase_price = 5800,
+            .mortgage_value = 2750,
+            .rent_price = 480,
+            .house_construction_cost = 1500,
+            .hotel_construction_cost = 6000,
+            .current_owner_no = -1,
         }
     },
 
@@ -310,11 +327,12 @@ Squares squares[40] =
         .square_name = "Katugastota",
         .property_group = Red,
         .property_details = {
-            .purchase_price = 6000.00,
-            .mortgage_value = 2750.00,
-            .rent_price = 500.00,
-            .house_construction_cost = 1500.00,
-            .hotel_construction_cost = 6000.00
+            .purchase_price = 6000,
+            .mortgage_value = 2750,
+            .rent_price = 500,
+            .house_construction_cost = 1500,
+            .hotel_construction_cost = 6000,
+            .current_owner_no = -1,
         }
     },
 
@@ -325,9 +343,10 @@ Squares squares[40] =
         .square_name = "Galle Railway Station",
         .property_group = None,
         .property_details = {
-            .purchase_price = 1500.00,
-            .mortgage_value = 750.00,
-            .rent_price = 250.00
+            .purchase_price = 1500,
+            .mortgage_value = 750,
+            .rent_price = 250,
+            .current_owner_no = -1,
         }
     },
 
@@ -338,11 +357,12 @@ Squares squares[40] =
         .square_name = "Galle Fort",
         .property_group = Yellow,
         .property_details = {
-            .purchase_price = 6500.00,
-            .mortgage_value = 3250.00,
-            .rent_price = 600.00,
-            .house_construction_cost = 2000.00,
-            .hotel_construction_cost = 8000.00
+            .purchase_price = 6500,
+            .mortgage_value = 3250,
+            .rent_price = 600,
+            .house_construction_cost = 2000,
+            .hotel_construction_cost = 8000,
+            .current_owner_no = -1,
         }
     },
 
@@ -353,11 +373,12 @@ Squares squares[40] =
         .square_name = "Unawatuna",
         .property_group = Yellow,
         .property_details = {
-            .purchase_price = 6800.00,
-            .mortgage_value = 3250.00,
-            .rent_price = 620.00,
-            .house_construction_cost = 2000.00,
-            .hotel_construction_cost = 8000.00
+            .purchase_price = 6800,
+            .mortgage_value = 3250,
+            .rent_price = 620,
+            .house_construction_cost = 2000,
+            .hotel_construction_cost = 8000,
+            .current_owner_no = -1,
         }
     },
 
@@ -368,9 +389,10 @@ Squares squares[40] =
         .square_name = "National Water Supply and Drainage Board",
         .property_group = None,
         .property_details = {
-            .purchase_price = 1500.00,
-            .mortgage_value = 750.00,
-            .rent_price = 250.00
+            .purchase_price = 1500,
+            .mortgage_value = 750,
+            .rent_price = 250,
+            .current_owner_no = -1,
         }
     },
 
@@ -381,11 +403,12 @@ Squares squares[40] =
         .square_name = "Hikkaduwa",
         .property_group = Yellow,
         .property_details = {
-            .purchase_price = 7000.00,
-            .mortgage_value = 3250.00,
-            .rent_price = 650.00,
-            .house_construction_cost = 2000.00,
-            .hotel_construction_cost = 8000.00
+            .purchase_price = 7000,
+            .mortgage_value = 3250,
+            .rent_price = 650,
+            .house_construction_cost = 2000,
+            .hotel_construction_cost = 8000,
+            .current_owner_no = -1,
         }
     },
 
@@ -404,11 +427,12 @@ Squares squares[40] =
         .square_name = "Jaffna Town",
         .property_group = Green,
         .property_details = {
-            .purchase_price = 8000.00,
-            .mortgage_value = 4000.00,
-            .rent_price = 750.00,
-            .house_construction_cost = 2500.00,
-            .hotel_construction_cost = 10000.00
+            .purchase_price = 8000,
+            .mortgage_value = 4000,
+            .rent_price = 750,
+            .house_construction_cost = 2500,
+            .hotel_construction_cost = 10000,
+            .current_owner_no = -1,
         }
     },
 
@@ -419,11 +443,12 @@ Squares squares[40] =
         .square_name = "Nallur",
         .property_group = Green,
         .property_details = {
-            .purchase_price = 8300.00,
-            .mortgage_value = 4000.00,
-            .rent_price = 780.00,
-            .house_construction_cost = 2500.00,
-            .hotel_construction_cost = 10000.00
+            .purchase_price = 8300,
+            .mortgage_value = 4000,
+            .rent_price = 780,
+            .house_construction_cost = 2500,
+            .hotel_construction_cost = 10000,
+            .current_owner_no = -1,
         }
     },
 
@@ -442,11 +467,12 @@ Squares squares[40] =
         .square_name = "Trincomalee",
         .property_group = Green,
         .property_details = {
-            .purchase_price = 8500.00,
-            .mortgage_value = 4000.00,
-            .rent_price = 800.00,
-            .house_construction_cost = 2500.00,
-            .hotel_construction_cost = 10000.00
+            .purchase_price = 8500,
+            .mortgage_value = 4000,
+            .rent_price = 800,
+            .house_construction_cost = 2500,
+            .hotel_construction_cost = 10000,
+            .current_owner_no = -1,
         }
     },
 
@@ -457,9 +483,10 @@ Squares squares[40] =
         .square_name = "Jaffna Railway Station",
         .property_group = None,
         .property_details = {
-            .purchase_price = 1500.00,
-            .mortgage_value = 750.00,
-            .rent_price = 250.00
+            .purchase_price = 1500,
+            .mortgage_value = 750,
+            .rent_price = 250,
+            .current_owner_no = -1,
         }
     },
 
@@ -478,11 +505,12 @@ Squares squares[40] =
         .square_name = "Nuwara Eliya",
         .property_group = DarkBlue,
         .property_details = {
-            .purchase_price = 10000.00,
-            .mortgage_value = 5000.00,
-            .rent_price = 1000.00,
-            .house_construction_cost = 3000.00,
-            .hotel_construction_cost = 12000.00
+            .purchase_price = 10000,
+            .mortgage_value = 5000,
+            .rent_price = 1000,
+            .house_construction_cost = 3000,
+            .hotel_construction_cost = 12000,
+            .current_owner_no = -1,
         }
     },
 
@@ -501,11 +529,12 @@ Squares squares[40] =
         .square_name = "Galle Face",
         .property_group = DarkBlue,
         .property_details = {
-            .purchase_price = 12000.00,
-            .mortgage_value = 5000.00,
-            .rent_price = 1200.00,
-            .house_construction_cost = 3000.00,
-            .hotel_construction_cost = 12000.00
+            .purchase_price = 12000,
+            .mortgage_value = 5000,
+            .rent_price = 1200,
+            .house_construction_cost = 3000,
+            .hotel_construction_cost = 12000,
+            .current_owner_no = -1,
         }
     }
 };

@@ -40,6 +40,10 @@ dice();
 tie_breaker(); // call the tie breaker function to check if any players are tied.
 sorting_players(); //call the sorting players function 
 start_playing();
+// Player_Aggressive_Investor();
+// Player_Conservative_Banker(int j);
+// Player_Risk_Taker(int j);
+// Player_Opportunistic_Trader(int j);
 
 // int start_game = start();
      
