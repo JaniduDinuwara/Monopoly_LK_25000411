@@ -76,7 +76,7 @@ typedef struct {
     int net_worth;
 
     PlayerType player_type;
-    //int game_round;
+    int game_round;
 } Players;
 
 
@@ -84,6 +84,7 @@ typedef struct {
 int rolldice(); //Funtion call from dice.c to main.c
 void dice(); //Funtion call from dice.c to main.c
 void tie_breaker(); //Funtion call from dice.c to main.c
+int dynamic_property_market(); //Funtion call from economy.c to main.c
 
 extern Squares squares[40];
 extern Players players[4];
