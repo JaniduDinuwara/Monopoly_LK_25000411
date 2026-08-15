@@ -18,7 +18,9 @@ Players players[4] =
      .total_property=0,
      .total_railways=0,
      .total_utilities=0,
-     .net_worth=30000 },
+     .net_worth=30000,
+    .in_the_jail= 0,
+   .jail_time=0 },
      //.game_round=0},
 
 //Conservative Banker
@@ -33,7 +35,9 @@ Players players[4] =
      .total_property=0,
      .total_railways=0,
      .total_utilities=0,
-     .net_worth=30000 },
+     .net_worth=30000,
+    .in_the_jail=0,
+    .jail_time=0},
      //.game_round=0},
 
 //Risk Taker
@@ -48,7 +52,9 @@ Players players[4] =
      .total_property=0,
      .total_railways=0,
      .total_utilities=0,
-     .net_worth=30000 },
+     .net_worth=30000,
+    .in_the_jail=0,
+   .jail_time=0 },
      //.game_round=0},
   
 //Opportunistic Trader
@@ -63,7 +69,9 @@ Players players[4] =
      .total_property=0,
      .total_railways=0,
      .total_utilities=0,
-     .net_worth=30000 }
+     .net_worth=30000,
+    .in_the_jail=0,
+    .jail_time=0 }
      //.game_round=0}
 };
 
@@ -159,6 +167,7 @@ if(landed_square->square_type == Property){
             printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);   
         }
     }else if(landed_square->square_type == Special){
+            come_from_jail(j,0,0);
 
     }else if(landed_square->square_type == Utility){
 
@@ -298,6 +307,7 @@ if(landed_square->square_type == Property){
             printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);   
         }
     }else if(landed_square->square_type == Special){
+            come_from_jail(j,0,0);
 
     }else if(landed_square->square_type == Utility){
 
@@ -438,6 +448,7 @@ if(landed_square->square_type == Property){
             printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);   
         }
     }else if(landed_square->square_type == Special){
+          come_from_jail(j,0,0);
 
     }else if(landed_square->square_type == Utility){
 
@@ -580,6 +591,7 @@ if(landed_square->square_type == Property){
             printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);   
         }
     }else if(landed_square->square_type == Special){
+            come_from_jail(j,0,0);
 
     }else if(landed_square->square_type == Utility){
 
@@ -626,6 +638,6 @@ if(landed_square->square_type == Property){
     }else if(landed_square->square_type == Bank){
 
     }
-printf("\n%s landed on %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
+//printf("\n%s landed on %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
 
 }

@@ -75,9 +75,10 @@ typedef struct {
     int total_railways;
     int total_utilities;
     int net_worth;
-
+int in_the_jail;
+int jail_time;
     PlayerType player_type;
-    int game_round;
+    //int game_round;
 } Players;
 
 typedef struct {

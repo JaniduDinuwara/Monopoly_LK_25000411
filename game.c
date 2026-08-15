@@ -60,13 +60,13 @@ int players_pass_go = 0;  //calculate the players who passed GO
    int old_position = players[j].current_position;
    int number_of_moves = players[j].dice_roll;
    int new_position = old_position + number_of_moves;
-
+if(players[j].in_the_jail == 0){
    players[j].current_position = new_position % 40;
 
    printf("\n %s rolled %d\n", players[j].player_name, players[j].dice_roll);
 
    printf("%s moves from square %d to square %d\n", players[j].player_name, old_position, players[j].current_position);
-   
+
    if(new_position >= 40){   //check player passed go
     players[j].balance += 2000;
     players_pass_go++;
@@ -74,6 +74,8 @@ int players_pass_go = 0;  //calculate the players who passed GO
     //printf("%d rounds passed\n",players[j].player_round);
       printf("\n%s passed GO.\n Collected LKR 2,000.\n", players[j].player_name);
       printf("Current Balance : LKR %d\n",players[j].balance);
+   }
+}else{ players[j].jail_time++;
    }
 
    switch (players[j].player_type) {  //call the player function for continue player behavior
@@ -96,7 +98,7 @@ if(players_pass_go == 4){ //calculate the game round
     game_round++;
     players_pass_go = 0;
  dynamic_property_market(game_round);
-    printf("\nGame Round : %d\n",game_round);
+    //printf("\nGame Round : %d\n",game_round);
   }
 
  }
@@ -104,3 +106,29 @@ if(players_pass_go == 4){ //calculate the game round
 }
 }
 
+void come_from_jail(int j , int die1, int die2) {
+    Squares *landed_square = &squares[players[j].current_position];
+if(landed_square->square_id == 30){
+    players[j].in_the_jail = 1;
+    players[j].current_position = 10;
+
+    if(players[j].balance >= 300){
+        players[j].balance -= 300;
+        players[j].in_the_jail = 0;
+        players[j].net_worth -= 300;
+        printf("\n%s pay the fine of LKR 300.\n", players[j].player_name);
+        printf("\n%s Released from jail.\n", players[j].player_name);
+    }else if(die1 ==die2){
+        players[j].in_the_jail = 0;
+        printf("\n%s Released from jail.\n", players[j].player_name);
+    }else if(players[j].jail_time ==3){
+        players[j].in_the_jail = 0;
+        printf("\n%s Released from jail.\n", players[j].player_name);
+
+    }
+
+}else if(landed_square->square_id == 20 || landed_square->square_id == 10){
+    // square 20 is free place. it is safety place for the players.
+    // square 10 is only visit jail.
+}
+}
