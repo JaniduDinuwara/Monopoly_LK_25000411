@@ -22,12 +22,6 @@ return 0;
 
 void sorting_players() {
 
-    // array of pointers to each player
-   //  Players *ptr[4];
-   //  for (int i = 0; i < 4; i++) {
-   //      ptr[i] = &players[i];
-   // }
-
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3 - i; j++) {
             if (players[j].first_roll < players[j + 1].first_roll) {

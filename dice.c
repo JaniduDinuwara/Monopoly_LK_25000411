@@ -107,46 +107,46 @@ void tie_breaker() { //compare one by one players to find tie and roll again dic
          printf("%s rolls %d.\n", players[1].player_name , players[1].first_roll);
          printf("%s rolls %d.\n", players[2].player_name , players[2].first_roll);
       tie_breaker();
-    }else if (players[0].first_roll == players[1].first_roll == players[2].first_roll){
+    }else if (players[0].first_roll == players[1].first_roll && players[0].first_roll == players[2].first_roll){
          printf("\nTie detected\n");
-         while (players[0].first_roll == players[1].first_roll == players[2].first_roll){
+         while (players[0].first_roll == players[1].first_roll && players[0].first_roll == players[2].first_roll){
          players[0].first_roll = rolldice();
          players[1].first_roll = rolldice();
          players[2].first_roll = rolldice();}
          printf("%s rolls %d.\n", players[0].player_name , players[0].first_roll);
          printf("%s rolls %d.\n", players[1].player_name , players[1].first_roll);
          printf("%s rolls %d.\n", players[2].player_name , players[2].first_roll);
-      tie_breaker();
-    }else if (players[0].first_roll == players[1].first_roll == players[3].first_roll){
+      //tie_breaker();
+    }else if (players[0].first_roll == players[1].first_roll && players[0].first_roll == players[3].first_roll){
          printf("\nTie detected\n");
-         while(players[0].first_roll == players[1].first_roll == players[3].first_roll){
+         while(players[0].first_roll == players[1].first_roll && players[0].first_roll == players[3].first_roll){
          players[0].first_roll = rolldice();
          players[1].first_roll = rolldice();
          players[3].first_roll = rolldice();}
          printf("%s rolls %d.\n", players[0].player_name , players[0].first_roll);
          printf("%s rolls %d.\n", players[1].player_name , players[1].first_roll);
          printf("%s rolls %d.\n", players[3].player_name , players[3].first_roll);
-      tie_breaker();
-    }else if (players[0].first_roll == players[2].first_roll == players[3].first_roll){
+     // tie_breaker();
+    }else if (players[0].first_roll == players[2].first_roll && players[0].first_roll == players[3].first_roll){
          printf("\nTie detected\n");
-         while(players[0].first_roll == players[2].first_roll == players[3].first_roll){
+         while(players[0].first_roll == players[2].first_roll && players[0].first_roll == players[3].first_roll){
          players[0].first_roll = rolldice();
          players[2].first_roll = rolldice();
          players[3].first_roll = rolldice();}
          printf("%s rolls %d.\n", players[0].player_name , players[0].first_roll);
          printf("%s rolls %d.\n", players[2].player_name , players[2].first_roll);
          printf("%s rolls %d.\n", players[3].player_name , players[3].first_roll);
-      tie_breaker();
-    }else if (players[1].first_roll == players[2].first_roll == players[3].first_roll){
+      //tie_breaker();
+    }else if (players[1].first_roll == players[2].first_roll && players[1].first_roll == players[3].first_roll){
          printf("\nTie detected\n");
-         while(players[1].first_roll == players[2].first_roll == players[3].first_roll){
+         while(players[1].first_roll == players[2].first_roll && players[1].first_roll == players[3].first_roll){
          players[1].first_roll = rolldice();
          players[2].first_roll = rolldice();
          players[3].first_roll = rolldice();}
          printf("%s rolls %d.\n", players[1].player_name , players[1].first_roll);
          printf("%s rolls %d.\n", players[2].player_name , players[2].first_roll);
          printf("%s rolls %d.\n", players[3].player_name , players[3].first_roll);
-      tie_breaker();
+      //tie_breaker();
 
     }else if (players[0].first_roll == players[1].first_roll) {
         printf("\nTie detected between %s and %s. Rolling again...\n", players[0].player_name, players[1].player_name);

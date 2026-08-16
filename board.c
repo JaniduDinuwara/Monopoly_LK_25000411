@@ -23,6 +23,10 @@ Squares squares[40] =
             .house_construction_cost = 500,
             .hotel_construction_cost = 2000,
             .current_owner_no = -1,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
+            .mortgage_status = 0,
+            .insurance_status = 0,
         
         }
     },
@@ -48,6 +52,10 @@ Squares squares[40] =
             .house_construction_cost = 500,
             .hotel_construction_cost = 2000,
             .current_owner_no = -1,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
+            .mortgage_status = 0,            
+            .insurance_status = 0,
             
         }
     },
@@ -71,6 +79,10 @@ Squares squares[40] =
             .mortgage_value = 750,
             .rent_price = 250,
             .current_owner_no = -1,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
+            .mortgage_status = 0,
+            .insurance_status = 0,
         }
     },
 
@@ -87,6 +99,10 @@ Squares squares[40] =
             .house_construction_cost = 750,
             .hotel_construction_cost = 3000,
             .current_owner_no = -1,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
+            .mortgage_status = 0,
+            .insurance_status = 0,
             
         }
     },
@@ -112,6 +128,10 @@ Squares squares[40] =
             .house_construction_cost = 750,
             .hotel_construction_cost = 3000,
             .current_owner_no = -1,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
+            .mortgage_status = 0,            
+            .insurance_status = 0,
         
         }
     },
@@ -129,6 +149,10 @@ Squares squares[40] =
             .house_construction_cost = 750,
             .hotel_construction_cost = 3000,
             .current_owner_no = -1,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
+            .mortgage_status = 0,            
+            .insurance_status = 0,
         
         }
     },
@@ -154,6 +178,10 @@ Squares squares[40] =
             .house_construction_cost = 1000,
             .hotel_construction_cost = 4000,
             .current_owner_no = -1,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
+            .mortgage_status = 0,            
+            .insurance_status = 0,
         }
     },
 
@@ -167,6 +195,8 @@ Squares squares[40] =
             .purchase_price = 1500,
             .mortgage_value = 750,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
         }
     },
 
@@ -183,6 +213,10 @@ Squares squares[40] =
             .house_construction_cost = 1000,
             .hotel_construction_cost = 4000,
             .current_owner_no = -1,
+            .mortgage_status = 0,            
+            .insurance_status = 0,  
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -199,6 +233,10 @@ Squares squares[40] =
             .house_construction_cost = 1000,
             .hotel_construction_cost = 4000,
             .current_owner_no = -1,
+            .mortgage_status = 0,            
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -212,7 +250,10 @@ Squares squares[40] =
             .purchase_price = 1500,
             .mortgage_value = 750,
             .rent_price = 250,
-            .current_owner_no = -1,
+            .current_owner_no = -1, 
+            .mortgage_status = 0,
+            .insurance_status = 0,
+
         }
     },
 
@@ -229,6 +270,10 @@ Squares squares[40] =
             .house_construction_cost = 1250,
             .hotel_construction_cost = 5000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -258,6 +303,10 @@ Squares squares[40] =
             .house_construction_cost = 1250,
             .hotel_construction_cost = 5000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -274,6 +323,10 @@ Squares squares[40] =
             .house_construction_cost = 1250,
             .hotel_construction_cost = 5000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -298,6 +351,10 @@ Squares squares[40] =
             .house_construction_cost = 1500,
             .hotel_construction_cost = 6000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -322,6 +379,10 @@ Squares squares[40] =
             .house_construction_cost = 1500,
             .hotel_construction_cost = 6000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -338,6 +399,10 @@ Squares squares[40] =
             .house_construction_cost = 1500,
             .hotel_construction_cost = 6000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -352,6 +417,8 @@ Squares squares[40] =
             .mortgage_value = 750,
             .rent_price = 250,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
         }
     },
 
@@ -368,6 +435,10 @@ Squares squares[40] =
             .house_construction_cost = 2000,
             .hotel_construction_cost = 8000,
             .current_owner_no = -1,
+                .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -384,6 +455,10 @@ Squares squares[40] =
             .house_construction_cost = 2000,
             .hotel_construction_cost = 8000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -398,6 +473,8 @@ Squares squares[40] =
             .mortgage_value = 750,
             .rent_price = 250,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
         }
     },
 
@@ -414,6 +491,10 @@ Squares squares[40] =
             .house_construction_cost = 2000,
             .hotel_construction_cost = 8000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -438,6 +519,10 @@ Squares squares[40] =
             .house_construction_cost = 2500,
             .hotel_construction_cost = 10000,
             .current_owner_no = -1,
+                .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -454,6 +539,10 @@ Squares squares[40] =
             .house_construction_cost = 2500,
             .hotel_construction_cost = 10000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -478,6 +567,10 @@ Squares squares[40] =
             .house_construction_cost = 2500,
             .hotel_construction_cost = 10000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -492,6 +585,8 @@ Squares squares[40] =
             .mortgage_value = 750,
             .rent_price = 250,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
         }
     },
 
@@ -516,6 +611,10 @@ Squares squares[40] =
             .house_construction_cost = 3000,
             .hotel_construction_cost = 12000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     },
 
@@ -540,6 +639,10 @@ Squares squares[40] =
             .house_construction_cost = 3000,
             .hotel_construction_cost = 12000,
             .current_owner_no = -1,
+            .mortgage_status = 0,
+            .insurance_status = 0,
+            .number_of_buildings = 0,
+            .no_of_hotels = 0,
         }
     }
 };

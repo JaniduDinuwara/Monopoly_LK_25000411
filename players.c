@@ -21,6 +21,7 @@ Players players[4] =
      .net_worth=30000,
     .in_the_jail= 0,
    .jail_time=0,
+   .loan_amount=0,
  },
      //.game_round=0},
 
@@ -39,6 +40,7 @@ Players players[4] =
      .net_worth=30000,
     .in_the_jail=0,
     .jail_time=0,
+    .loan_amount=0,
   },
      //.game_round=0},
 
@@ -57,6 +59,7 @@ Players players[4] =
      .net_worth=30000,
     .in_the_jail=0,
    .jail_time=0,
+   .loan_amount=0,
     },
      //.game_round=0},
   
@@ -75,6 +78,7 @@ Players players[4] =
      .net_worth=30000,
     .in_the_jail=0,
     .jail_time=0,
+    .loan_amount=0,
      }
      //.game_round=0}
 };
@@ -99,8 +103,30 @@ if(landed_square->square_type == Property){
         } // go to the auction
 
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
-            
-              printf("This Is Mine"); //for now, the player does not get action
+
+            if(players[j].player_id == property_colour[0].monopoly_owner && landed_square->property_details.mortgage_status == 0){
+                if (landed_square->property_details.number_of_buildings < 4) {
+                  if (players[j].balance >= landed_square->property_details.house_construction_cost){
+                      landed_square->property_details.number_of_buildings++;
+                      players[j].balance -= landed_square->property_details.house_construction_cost;
+                      players[j].net_worth -= landed_square->property_details.house_construction_cost;
+                      players[j].net_worth += landed_square->property_details.house_construction_cost;
+                      printf("\n%s constructed a house on %s\n", players[j].player_name, landed_square->square_name, landed_square->property_details.house_construction_cost);
+                      printf("construction cost : LKR %d\n",landed_square->property_details.house_construction_cost);
+
+                      if (landed_square->property_details.number_of_buildings == 4) {
+                           if (players[j].balance >= landed_square->property_details.hotel_construction_cost){
+                               landed_square->property_details.no_of_hotels++;
+                               players[j].balance -= landed_square->property_details.hotel_construction_cost;
+                               players[j].net_worth -= landed_square->property_details.hotel_construction_cost;
+                               players[j].net_worth += landed_square->property_details.hotel_construction_cost;
+                               printf("\n%s upgraded %s to a hotel\n", players[j].player_name, landed_square->square_name, landed_square->property_details.hotel_construction_cost);
+                           }
+                        }    
+                           }
+                  }
+            }
+    
         }else{
             int rent = landed_square->property_details.rent_price;
             int remaining_balance = players[j].balance - rent;
@@ -242,7 +268,33 @@ if(landed_square->square_type == Property){
         } // go to the auction
 
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
-             printf("This Is Mine");  //for now, the player does not get action
+
+            if(players[j].player_id == property_colour[0].monopoly_owner && landed_square->property_details.mortgage_status == 0){
+                 if (landed_square->property_details.number_of_buildings < 4) {
+        if (players[j].balance >=landed_square->property_details.house_construction_cost){
+            landed_square->property_details.number_of_buildings++;
+            players[j].balance -= landed_square->property_details.house_construction_cost;
+            players[j].net_worth -= landed_square->property_details.house_construction_cost;
+            players[j].net_worth += landed_square->property_details.house_construction_cost;
+            printf("\n%s constructed a house on %s\n", players[j].player_name, landed_square->square_name, landed_square->property_details.house_construction_cost);
+            printf("construction cost : LKR %d\n",landed_square->property_details.house_construction_cost);
+
+            if (landed_square->property_details.number_of_buildings == 4) {
+                if(players[j].loan_amount == 0){
+                   if (players[j].balance >= landed_square->property_details.hotel_construction_cost){
+                       landed_square->property_details.no_of_hotels++;
+                       players[j].balance -= landed_square->property_details.hotel_construction_cost;
+                       players[j].net_worth -= landed_square->property_details.hotel_construction_cost;
+                       players[j].net_worth += landed_square->property_details.hotel_construction_cost;
+                       printf("\n%s upgraded %s to a hotel\n", players[j].player_name, landed_square->square_name, landed_square->property_details.hotel_construction_cost);
+                   }
+                }    
+                   }
+            }
+        }
+        }
+
+             
         }else{
             int rent = landed_square->property_details.rent_price;
             int remaining_balance = players[j].balance - rent;
@@ -382,7 +434,30 @@ if(landed_square->square_type == Property){
             printf("Remaining Balance : LKR %d\n",players[j].balance);
         } // go to the auction
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
-              printf("This Is Mine") ;//for now, the player does not get action
+            if(players[j].player_id == property_colour[0].monopoly_owner && landed_square->property_details.mortgage_status == 0){
+
+                //he like to construct hotel as early as possible. therefore, first of all he try to build hotel.
+                 if (landed_square->property_details.number_of_buildings == 4) {
+        if (players[j].balance >=landed_square->property_details.hotel_construction_cost){
+            landed_square->property_details.no_of_hotels++;
+            players[j].balance -= landed_square->property_details.hotel_construction_cost;
+            players[j].net_worth -= landed_square->property_details.hotel_construction_cost;
+            players[j].net_worth += landed_square->property_details.hotel_construction_cost;
+            printf("\n%s upgraded %s to a hotel\n", players[j].player_name, landed_square->square_name, landed_square->property_details.hotel_construction_cost);
+        }
+    
+        }else if (landed_square->property_details.number_of_buildings < 4){  //constructs the house
+
+        if (players[j].balance >=landed_square->property_details.house_construction_cost){
+            landed_square->property_details.number_of_buildings++;
+            players[j].balance -= landed_square->property_details.house_construction_cost;
+            players[j].net_worth -= landed_square->property_details.house_construction_cost;
+            players[j].net_worth += landed_square->property_details.house_construction_cost;
+            printf("\n%s constructed a house on %s\n", players[j].player_name, landed_square->square_name, landed_square->property_details.house_construction_cost);
+            printf("construction cost : LKR %d\n",landed_square->property_details.house_construction_cost);
+        }
+        }
+    }   
         }else {
             int rent = landed_square->property_details.rent_price;
             int remaining_balance = players[j].balance - rent;
@@ -399,6 +474,7 @@ if(landed_square->square_type == Property){
     }else if(landed_square->square_type == Tax){
 
     }else if(landed_square->square_type == Railway){
+
         if(landed_square->property_details.current_owner_no == -1){
         int price = landed_square->property_details.purchase_price;
         int remaining_balance = players[j].balance - price;
@@ -524,7 +600,35 @@ if(landed_square->square_type == Property){
             printf("Remaining Balance : LKR %d\n",players[j].balance);
         } // go to the auction
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
-             printf("This Is Mine");  //for now, the player does not get action
+
+            if(players[j].player_id == property_colour[0].monopoly_owner && landed_square->property_details.mortgage_status == 0){
+
+                //if (inflation_active == 0){ // he construct buldings avoid inflation.
+
+                    if (landed_square->property_details.number_of_buildings < 4) {
+                        if (players[j].balance >= landed_square->property_details.house_construction_cost){
+                            landed_square->property_details.number_of_buildings++;
+                            players[j].balance -= landed_square->property_details.house_construction_cost;
+                            players[j].net_worth -= landed_square->property_details.house_construction_cost;
+                            players[j].net_worth += landed_square->property_details.house_construction_cost;
+                            printf("\n%s constructed a house on %s\n", players[j].player_name, landed_square->square_name, landed_square->property_details.house_construction_cost);
+                            printf("construction cost : LKR %d\n",landed_square->property_details.house_construction_cost);
+
+                 if (landed_square->property_details.number_of_buildings == 4) {
+                     if (players[j].balance >= landed_square->property_details.hotel_construction_cost){
+                     landed_square->property_details.no_of_hotels++;
+                    players[j].balance -= landed_square->property_details.hotel_construction_cost;
+                     players[j].net_worth -= landed_square->property_details.hotel_construction_cost;
+                    players[j].net_worth += landed_square->property_details.hotel_construction_cost;
+                     printf("\n%s upgraded %s to a hotel\n", players[j].player_name, landed_square->square_name, landed_square->property_details.hotel_construction_cost);
+                                }
+                            }
+                        }
+                    }
+//}
+
+                }
+            
         }else{
             int rent = landed_square->property_details.rent_price;
             int remaining_balance = players[j].balance - rent;

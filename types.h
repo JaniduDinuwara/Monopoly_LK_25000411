@@ -33,6 +33,7 @@ typedef struct {                  //create a structure for defining properties o
     int mortgage_status;
     int insurance_status;
     int number_of_buildings;
+    int no_of_hotels;
      int mortgage_value;
      int house_construction_cost;
     int hotel_construction_cost;
@@ -77,6 +78,7 @@ typedef struct {
     int net_worth;
 int in_the_jail;
 int jail_time;
+ int loan_amount;
 
     PlayerType player_type;
     //int game_round;
@@ -88,6 +90,7 @@ typedef struct {
     int last_boom_round;
     int last_decline_round;
     int monopoly_owner;
+   
 
 } PropertyColour;
 
