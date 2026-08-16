@@ -100,7 +100,7 @@ if(landed_square->square_type == Property){
 
             printf("\n%s purchased %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
             printf("Remaining Balance : LKR %d\n",players[j].balance);
-        } // go to the auction
+        } else{ auction(j);} // go to the auction
 
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
 
@@ -128,6 +128,7 @@ if(landed_square->square_type == Property){
             }
     
         }else{
+            if(landed_square->property_details.number_of_buildings == 0){
             int rent = landed_square->property_details.rent_price;
             int remaining_balance = players[j].balance - rent;
             players[j].balance = remaining_balance;
@@ -136,6 +137,19 @@ if(landed_square->square_type == Property){
             printf("\n%s landed on %s.\n", players[j].player_name, landed_square->square_name);
             printf("Rent paid : LKR %d\n",rent);
             printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);
+            }
+            for(int i = 1; i<4; i++){
+                if(landed_square->property_details.number_of_buildings == i){
+                    int rent = landed_square->property_details.rent_price*(i+1);
+                    int remaining_balance = players[j].balance - rent;
+                    players[j].balance = remaining_balance;
+                    players[landed_square->property_details.current_owner_no].balance += rent;
+                    players[j].net_worth -= rent;
+                    printf("\n%s landed on %s.\n", players[j].player_name, landed_square->square_name);
+                    printf("Rent paid : LKR %d\n",rent);
+                    printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);
+                }
+            }
         }
     
     }else if(landed_square->square_type == Event){
@@ -265,7 +279,7 @@ if(landed_square->square_type == Property){
 
             printf("\n%s purchased %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
             printf("Remaining Balance : LKR %d\n",players[j].balance);
-        } // go to the auction
+        } else{ auction(j);} // go to the auction
 
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
 
@@ -296,6 +310,7 @@ if(landed_square->square_type == Property){
 
              
         }else{
+            if(landed_square->property_details.number_of_buildings == 0){
             int rent = landed_square->property_details.rent_price;
             int remaining_balance = players[j].balance - rent;
             players[j].balance = remaining_balance;
@@ -304,6 +319,19 @@ if(landed_square->square_type == Property){
             printf("\n%s landed on %s.\n", players[j].player_name, landed_square->square_name);
             printf("Rent paid : LKR %d\n",rent);
             printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);
+        } 
+        for(int i = 1; i<4; i++){
+                if(landed_square->property_details.number_of_buildings == i){
+                    int rent = landed_square->property_details.rent_price*(i+1);
+                    int remaining_balance = players[j].balance - rent;
+                    players[j].balance = remaining_balance;
+                    players[landed_square->property_details.current_owner_no].balance += rent;
+                    players[j].net_worth -= rent;
+                    printf("\n%s landed on %s.\n", players[j].player_name, landed_square->square_name);
+                    printf("Rent paid : LKR %d\n",rent);
+                    printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);
+                }
+            }
         }
     
     }else if(landed_square->square_type == Event){
@@ -432,7 +460,10 @@ if(landed_square->square_type == Property){
 
             printf("\n%s purchased %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
             printf("Remaining Balance : LKR %d\n",players[j].balance);
-        } // go to the auction
+
+        } else{ auction(j);} // go to the auction
+
+
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
             if(players[j].player_id == property_colour[0].monopoly_owner && landed_square->property_details.mortgage_status == 0){
 
@@ -459,6 +490,7 @@ if(landed_square->square_type == Property){
         }
     }   
         }else {
+            if(landed_square->property_details.number_of_buildings == 0){
             int rent = landed_square->property_details.rent_price;
             int remaining_balance = players[j].balance - rent;
             players[j].balance = remaining_balance;
@@ -467,6 +499,19 @@ if(landed_square->square_type == Property){
             printf("\n%s landed on %s.\n", players[j].player_name, landed_square->square_name);
             printf("Rent paid : LKR %d\n",rent);
             printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);
+        }
+        for(int i = 1; i<4; i++){
+                if(landed_square->property_details.number_of_buildings == i){
+                    int rent = landed_square->property_details.rent_price*(i+1);
+                    int remaining_balance = players[j].balance - rent;
+                    players[j].balance = remaining_balance;
+                    players[landed_square->property_details.current_owner_no].balance += rent;
+                    players[j].net_worth -= rent;
+                    printf("\n%s landed on %s.\n", players[j].player_name, landed_square->square_name);
+                    printf("Rent paid : LKR %d\n",rent);
+                    printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);
+                }
+            }
         }
     
     }else if(landed_square->square_type == Event){
@@ -598,7 +643,10 @@ if(landed_square->square_type == Property){
 
             printf("\n%s purchased %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
             printf("Remaining Balance : LKR %d\n",players[j].balance);
-        } // go to the auction
+
+        } else { auction(j);}
+        
+        // go to the auction
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
 
             if(players[j].player_id == property_colour[0].monopoly_owner && landed_square->property_details.mortgage_status == 0){
@@ -630,6 +678,7 @@ if(landed_square->square_type == Property){
                 }
             
         }else{
+            if(landed_square->property_details.number_of_buildings == 0){
             int rent = landed_square->property_details.rent_price;
             int remaining_balance = players[j].balance - rent;
             players[j].balance = remaining_balance;
@@ -638,6 +687,19 @@ if(landed_square->square_type == Property){
             printf("\n%s landed on %s.\n", players[j].player_name, landed_square->square_name);
             printf("Rent paid : LKR %d\n",rent);
             printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);
+        }
+        for(int i = 1; i<4; i++){
+                if(landed_square->property_details.number_of_buildings == i){
+                    int rent = landed_square->property_details.rent_price*(i+1);
+                    int remaining_balance = players[j].balance - rent;
+                    players[j].balance = remaining_balance;
+                    players[landed_square->property_details.current_owner_no].balance += rent;
+                    players[j].net_worth -= rent;
+                    printf("\n%s landed on %s.\n", players[j].player_name, landed_square->square_name);
+                    printf("Rent paid : LKR %d\n",rent);
+                    printf("Owner : %s\n",players[landed_square->property_details.current_owner_no].player_name);
+                }
+            }
         }
     
     }else if(landed_square->square_type == Event){
