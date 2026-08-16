@@ -9,7 +9,7 @@ int start() {
 
 // Example usage of the squares array
      for (int i = 0; i < 40; i++) {
-        printf("\nSquare ID: %d, Name: %s, Type: %d\n", squares[i].square_id, squares[i].square_name, squares[i].square_type);
+        printf("\nSquare iD: %d, Name: %s, Type: %d\n", squares[i].square_id, squares[i].square_name, squares[i].square_type);
      }
      // Example usage of the players array
      for (int i = 0; i < 4; i++) {
@@ -98,15 +98,18 @@ if(players_pass_go == 4){ //calculate the game round
     game_round++;
     players_pass_go = 0;
  dynamic_property_market(game_round);
+ 
     //printf("\nGame Round : %d\n",game_round);
   }
+monopoly();
 
  }
 
 }
 }
 
-void come_from_jail(int j , int die1, int die2) {
+// when player going to jail, how player can released from jail.
+void come_from_jail(int j , int die1, int die2) { 
     Squares *landed_square = &squares[players[j].current_position];
 if(landed_square->square_id == 30){
     players[j].in_the_jail = 1;
@@ -124,11 +127,72 @@ if(landed_square->square_id == 30){
     }else if(players[j].jail_time ==3){
         players[j].in_the_jail = 0;
         printf("\n%s Released from jail.\n", players[j].player_name);
-
     }
-
 }else if(landed_square->square_id == 20 || landed_square->square_id == 10){
     // square 20 is free place. it is safety place for the players.
     // square 10 is only visit jail.
 }
 }
+
+
+void monopoly() {
+    for(int i = 0; i < 4; i++){
+    if(squares[1].property_details.current_owner_no == players[i].player_id 
+        && squares[3].property_details.current_owner_no == players[i].player_id){
+            
+        property_colour[0].monopoly_owner = players[i].player_id;
+            printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[0].property_group);
+
+    } if(squares[6].property_details.current_owner_no == players[i].player_id 
+         && squares[8].property_details.current_owner_no== players[i].player_id
+            && squares[9].property_details.current_owner_no == players[i].player_id){
+                
+                property_colour[1].monopoly_owner = players[i].player_id;
+                printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[1].property_group);
+
+    }if(squares[11].property_details.current_owner_no == players[i].player_id
+         && squares[13].property_details.current_owner_no == players[i].player_id
+            && squares[14].property_details.current_owner_no == players[i].player_id){
+                
+                property_colour[2].monopoly_owner = players[i].player_id;
+                printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[2].property_group);
+
+    }if(squares[16].property_details.current_owner_no == players[i].player_id
+         && squares[18].property_details.current_owner_no == players[i].player_id
+            && squares[19].property_details.current_owner_no == players[i].player_id){
+                
+                property_colour[3].monopoly_owner = players[i].player_id;
+                printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[3].property_group);
+
+    } if(squares[21].property_details.current_owner_no == players[i].player_id
+         && squares[23].property_details.current_owner_no == players[i].player_id
+            && squares[24].property_details.current_owner_no == players[i].player_id){
+                
+                property_colour[4].monopoly_owner = players[i].player_id;
+                printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[4].property_group);
+
+    }if(squares[26].property_details.current_owner_no == players[i].player_id
+         && squares[27].property_details.current_owner_no == players[i].player_id
+            && squares[29].property_details.current_owner_no == players[i].player_id){
+                
+                property_colour[5].monopoly_owner = players[i].player_id;
+                printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[5].property_group);
+
+    } if(squares[31].property_details.current_owner_no == players[i].player_id
+         && squares[32].property_details.current_owner_no == players[i].player_id
+            && squares[34].property_details.current_owner_no == players[i].player_id){
+                
+                property_colour[6].monopoly_owner = players[i].player_id;
+                printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[6].property_group);
+
+    } if(squares[37].property_details.current_owner_no == players[i].player_id
+         && squares[39].property_details.current_owner_no == players[i].player_id){
+
+                property_colour[7].monopoly_owner = players[i].player_id;
+                printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[7].property_group);
+
+    }
+         }
+
+}
+

@@ -77,6 +77,7 @@ typedef struct {
     int net_worth;
 int in_the_jail;
 int jail_time;
+
     PlayerType player_type;
     //int game_round;
 } Players;
@@ -86,7 +87,7 @@ typedef struct {
     Properties property_details;
     int last_boom_round;
     int last_decline_round;
-    
+    int monopoly_owner;
 
 } PropertyColour;
 

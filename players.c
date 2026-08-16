@@ -20,7 +20,8 @@ Players players[4] =
      .total_utilities=0,
      .net_worth=30000,
     .in_the_jail= 0,
-   .jail_time=0 },
+   .jail_time=0,
+ },
      //.game_round=0},
 
 //Conservative Banker
@@ -37,7 +38,8 @@ Players players[4] =
      .total_utilities=0,
      .net_worth=30000,
     .in_the_jail=0,
-    .jail_time=0},
+    .jail_time=0,
+  },
      //.game_round=0},
 
 //Risk Taker
@@ -54,7 +56,8 @@ Players players[4] =
      .total_utilities=0,
      .net_worth=30000,
     .in_the_jail=0,
-   .jail_time=0 },
+   .jail_time=0,
+    },
      //.game_round=0},
   
 //Opportunistic Trader
@@ -71,7 +74,8 @@ Players players[4] =
      .total_utilities=0,
      .net_worth=30000,
     .in_the_jail=0,
-    .jail_time=0 }
+    .jail_time=0,
+     }
      //.game_round=0}
 };
 
@@ -93,7 +97,9 @@ if(landed_square->square_type == Property){
             printf("\n%s purchased %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
             printf("Remaining Balance : LKR %d\n",players[j].balance);
         } // go to the auction
+
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
+            
               printf("This Is Mine"); //for now, the player does not get action
         }else{
             int rent = landed_square->property_details.rent_price;
@@ -234,6 +240,7 @@ if(landed_square->square_type == Property){
             printf("\n%s purchased %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
             printf("Remaining Balance : LKR %d\n",players[j].balance);
         } // go to the auction
+
         }else if(landed_square->property_details.current_owner_no == players[j].player_id){
              printf("This Is Mine");  //for now, the player does not get action
         }else{
