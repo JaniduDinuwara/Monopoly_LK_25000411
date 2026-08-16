@@ -79,6 +79,8 @@ typedef struct {
 int in_the_jail;
 int jail_time;
  int loan_amount;
+ int loan_interest;
+ int total_hotels;
 
     PlayerType player_type;
     //int game_round;
@@ -94,6 +96,7 @@ typedef struct {
 
 } PropertyColour;
 
+// this file use the as the header file of dice.c, auction.c, economy.c
 int rolldice(); //Funtion call from dice.c to main.c
 void dice(); //Funtion call from dice.c to main.c
 void tie_breaker(); //Funtion call from dice.c to main.c

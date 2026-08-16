@@ -3,6 +3,7 @@
 #include "types.h"
 #include "players.h"
 #include "game.h"
+#include "finance.h"
 #include <time.h>
 
 
@@ -39,7 +40,7 @@ setbuf(stdout, NULL);
 dice();
 tie_breaker(); // call the tie breaker function to check if any players are tied.
 sorting_players(); //call the sorting players function 
-start_playing();
+start_playing();  //call the start_playing function
 //dynamic_property_market(0);
 
 // int start_game = start();

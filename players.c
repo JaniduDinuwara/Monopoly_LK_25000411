@@ -2,6 +2,7 @@
 #include "players.h"
 #include "game.h"
 #include "types.h"
+#include "finance.h"
 
 
 Players players[4] =
@@ -22,6 +23,8 @@ Players players[4] =
     .in_the_jail= 0,
    .jail_time=0,
    .loan_amount=0,
+   .loan_interest=0,
+   .total_hotels=0,
  },
      //.game_round=0},
 
@@ -41,6 +44,8 @@ Players players[4] =
     .in_the_jail=0,
     .jail_time=0,
     .loan_amount=0,
+    .loan_interest=0,
+    .total_hotels=0,
   },
      //.game_round=0},
 
@@ -60,6 +65,8 @@ Players players[4] =
     .in_the_jail=0,
    .jail_time=0,
    .loan_amount=0,
+   .loan_interest=0,
+   .total_hotels=0,
     },
      //.game_round=0},
   
@@ -79,10 +86,12 @@ Players players[4] =
     .in_the_jail=0,
     .jail_time=0,
     .loan_amount=0,
+    .loan_interest=0,
+    .total_hotels=0,
      }
      //.game_round=0}
 };
-
+ // declare the fuction for each player type separately
 void Player_Aggressive_Investor(int j) {
     
 Squares *landed_square = &squares[players[j].current_position];
@@ -256,7 +265,7 @@ if(landed_square->square_type == Property){
     }else if(landed_square->square_type == Insurance){
 
     }else if(landed_square->square_type == Bank){
-
+         take_loan(j);
     }
 //printf("\n%s landed on %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
    
@@ -437,7 +446,7 @@ if(landed_square->square_type == Property){
     }else if(landed_square->square_type == Insurance){
 
     }else if(landed_square->square_type == Bank){
-
+           take_loan(j);
     }
 //printf("\n%s landed on %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
    
@@ -619,7 +628,7 @@ if(landed_square->square_type == Property){
     }else if(landed_square->square_type == Insurance){
 
     }else if(landed_square->square_type == Bank){
-
+          take_loan(j);
     }
    //printf("\n%s landed on %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
 
@@ -809,7 +818,7 @@ if(landed_square->square_type == Property){
     }else if(landed_square->square_type == Insurance){
 
     }else if(landed_square->square_type == Bank){
-
+             take_loan(j);
     }
 //printf("\n%s landed on %s for LKR %d\n", players[j].player_name, landed_square->square_name, landed_square->property_details.purchase_price);
 

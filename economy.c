@@ -35,13 +35,13 @@ void apply_market_decline(PropertyGroup group)
 
 int dynamic_property_market(int game_round)
 {
-    if (game_round % 10 != 0)
+    if (game_round % 10 != 0)  // to call 10 round by 10 round
     {
         return 0;
     }
 
     int market_boom_group = -1;
-    int random_group = rand() % 8;
+    int random_group = rand() % 8;  // select randomly group
 
     if (game_round -property_colour[random_group].last_boom_round >= 30)
     {
@@ -57,7 +57,7 @@ int dynamic_property_market(int game_round)
     }
 
     int market_decline_group = -1;
-    random_group = rand() % 8;
+    random_group = rand() % 8;   //select randomly group
 
     if (game_round - property_colour[random_group].last_decline_round >= 30)
     {

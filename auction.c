@@ -41,7 +41,7 @@ while(active_players > 1) break;
         if(i==0){ //aggressive investor
             maximum_bid = landed_square->property_details.purchase_price*1.20;
                     new_bid = bid_start_price + bid_minimum_increment;
-            if(players[i].balance >= new_bid){ //aggressive investor's behaviors about auction
+            if(players[i].balance >= new_bid){   //aggressive investor's behaviors about auction
                 if(maximum_bid >= highest_bid){
                     
                     highest_bid = new_bid;
@@ -56,7 +56,7 @@ while(active_players > 1) break;
         }else if(i==1){ //conservative banker
             maximum_bid = landed_square->property_details.purchase_price;
                     new_bid = highest_bid + bid_minimum_increment;
-            if(players[i].balance >= new_bid){ //conservative banker's behaviors about auction
+            if(players[i].balance >= new_bid){   //conservative banker's behaviors about auction
                 if(maximum_bid >= highest_bid){
                     
                     highest_bid = new_bid;
@@ -71,7 +71,7 @@ while(active_players > 1) break;
                 maximum_bid = players[i].balance;
                     new_bid =  highest_bid + bid_minimum_increment;
 
-                if(players[i].balance >= highest_bid){ //risk taker's behaviors about auction
+                if(players[i].balance >= highest_bid){    //risk taker's behaviors about auction
                                        
                      highest_bid = new_bid;
                     highest_bidder = i;

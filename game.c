@@ -92,13 +92,54 @@ if(players_pass_go == 4){ //calculate the game round
     game_round++;
     players_pass_go = 0;
  dynamic_property_market(game_round);
- 
-    //printf("\nGame Round : %d\n",game_round);
+  
+ printf("\n=================================\n");
+printf("Round %d Summary\n",game_round);
+ printf("===================================\n");
+
+ printf("\n%s\n",players[0].player_name);
+ printf("\nCash : LKR %d\n",players[0].balance);
+ printf("\nNet Worth : LKR %d\n",players[0].net_worth);
+printf("\nProperties : %d\n",players[0].total_property);
+printf("\nHotels : %d\n",players[0].total_hotels);
+printf("\nOutstanding Loan : LKR %d\n",players[0].loan_amount);
+printf("\n----------------------------------------------------\n");
+
+ printf("\n%s\n",players[1].player_name);
+ printf("\nCash : LKR %d\n",players[1].balance);
+ printf("\nNet Worth : LKR %d\n",players[1].net_worth);
+ printf("\nProperties : %d\n",players[1].total_property);
+ printf("\nHotels : %d\n",players[1].total_hotels);
+ printf("\nOutstanding Loan : LKR %d\n",players[1].loan_amount);
+ printf("\n----------------------------------------------------\n");
+
+ printf("\n%s\n",players[2].player_name);
+ printf("\nCash : LKR %d\n",players[2].balance);
+ printf("\nNet Worth : LKR %d\n",players[2].net_worth);
+ printf("\nProperties : %d\n",players[2].total_property);
+ printf("\nHotels : %d\n",players[2].total_hotels);
+ printf("\nOutstanding Loan : LKR %d\n",players[2].loan_amount);
+ printf("\n----------------------------------------------------\n");
+
+ printf("\n%s\n",players[3].player_name);
+ printf("\nCash : LKR %d\n",players[3].balance);
+ printf("\nNet Worth : LKR %d\n",players[3].net_worth);
+ printf("\nProperties : %d\n",players[3].total_property);
+ printf("\nHotels : %d\n",players[3].total_hotels);
+ printf("\nOutstanding Loan : LKR %d\n",players[3].loan_amount);
+ printf("\n----------------------------------------------------\n");
+
   }
 monopoly();
+check_bankruptcy(j);
 
  }
 
+}
+if(game_round == 500){
+    printf("\n==============\n");
+    printf("\nEnd of Game\n");
+    printf("\n==============\n");
 }
 }
 
@@ -131,55 +172,55 @@ if(landed_square->square_id == 30){
 
 void monopoly() {
     for(int i = 0; i < 4; i++){
-    if(squares[1].property_details.current_owner_no == players[i].player_id 
+    if(squares[1].property_details.current_owner_no == players[i].player_id   //check group of brown
         && squares[3].property_details.current_owner_no == players[i].player_id){
             
         property_colour[0].monopoly_owner = players[i].player_id;
             printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[0].property_group);
 
-    } if(squares[6].property_details.current_owner_no == players[i].player_id 
+    } if(squares[6].property_details.current_owner_no == players[i].player_id    //check group of light blue
          && squares[8].property_details.current_owner_no== players[i].player_id
             && squares[9].property_details.current_owner_no == players[i].player_id){
                 
                 property_colour[1].monopoly_owner = players[i].player_id;
                 printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[1].property_group);
 
-    }if(squares[11].property_details.current_owner_no == players[i].player_id
+    }if(squares[11].property_details.current_owner_no == players[i].player_id   //check group of pink
          && squares[13].property_details.current_owner_no == players[i].player_id
             && squares[14].property_details.current_owner_no == players[i].player_id){
                 
                 property_colour[2].monopoly_owner = players[i].player_id;
                 printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[2].property_group);
 
-    }if(squares[16].property_details.current_owner_no == players[i].player_id
+    }if(squares[16].property_details.current_owner_no == players[i].player_id         //check group of orange
          && squares[18].property_details.current_owner_no == players[i].player_id
             && squares[19].property_details.current_owner_no == players[i].player_id){
                 
                 property_colour[3].monopoly_owner = players[i].player_id;
                 printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[3].property_group);
 
-    } if(squares[21].property_details.current_owner_no == players[i].player_id
+    } if(squares[21].property_details.current_owner_no == players[i].player_id          //check group of red
          && squares[23].property_details.current_owner_no == players[i].player_id
             && squares[24].property_details.current_owner_no == players[i].player_id){
                 
                 property_colour[4].monopoly_owner = players[i].player_id;
                 printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[4].property_group);
 
-    }if(squares[26].property_details.current_owner_no == players[i].player_id
+    }if(squares[26].property_details.current_owner_no == players[i].player_id          //check group of yellow
          && squares[27].property_details.current_owner_no == players[i].player_id
             && squares[29].property_details.current_owner_no == players[i].player_id){
                 
                 property_colour[5].monopoly_owner = players[i].player_id;
                 printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[5].property_group);
 
-    } if(squares[31].property_details.current_owner_no == players[i].player_id
+    } if(squares[31].property_details.current_owner_no == players[i].player_id       //check group of green
          && squares[32].property_details.current_owner_no == players[i].player_id
             && squares[34].property_details.current_owner_no == players[i].player_id){
                 
                 property_colour[6].monopoly_owner = players[i].player_id;
                 printf("\n%s is the owner of the monopoly %d\n", players[i].player_name, property_colour[6].property_group);
 
-    } if(squares[37].property_details.current_owner_no == players[i].player_id
+    } if(squares[37].property_details.current_owner_no == players[i].player_id         //check group of dark blue
          && squares[39].property_details.current_owner_no == players[i].player_id){
 
                 property_colour[7].monopoly_owner = players[i].player_id;
@@ -187,6 +228,20 @@ void monopoly() {
 
     }
          }
+
+}
+
+int check_bankruptcy(int j){
+    int total_assests = players[j].net_worth;
+    int total_loans = players[j].loan_amount;
+    int bankruptcy_amount = total_assests - total_loans;
+    if(bankruptcy_amount > 0){
+        return 1;
+    }else{
+        printf("\n%s has been declared bankrupt.\n", players[j].player_name);
+        printf("\nRemaining assests transferred to the bank.\n");
+    }
+
 
 }
 
